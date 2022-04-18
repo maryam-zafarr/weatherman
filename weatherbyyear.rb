@@ -25,18 +25,18 @@ class WeatherByYear
   # Calculate highest temperature and day
   def max_temp
     @max_temp, @max_temp_day, @max_temp_month = calc_max(1)
-    puts "Highest: #{@max_temp}C on #{@max_temp_month} #{@max_temp_day}"
+    ['Highest: ', @max_temp, @max_temp_day, @max_temp_month, 'C']
   end
 
   # Calculate lowest temperature and day
   def min_temp
     @min_temp, @min_temp_day, @min_temp_month = calc_min(3)
-    puts "Lowest:  #{@min_temp}C on #{@min_temp_month} #{@min_temp_day}"
+    ['Lowest:  ', @min_temp, @min_temp_day, @min_temp_month, 'C']
   end
 
   # Calculate highest humidity and day
   def max_humidity
     @max_humidity, @max_humidity_day, @max_humidity_month = calc_max(7)
-    puts "Humid:   #{@max_humidity}% on #{@max_humidity_month} #{@max_humidity_day}"
+    ['Humid:   ', @max_humidity, @max_humidity_day, @max_humidity_month, '%']
   end
 end

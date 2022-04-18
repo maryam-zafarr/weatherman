@@ -43,7 +43,7 @@ module BasicCalculations
   def format_date(date)
     Date.parse(date.to_s).strftime('%d')
   end
-  
+
   def extract_month_year(date)
     Date.parse(date.to_s).strftime('%B %Y')
   end

@@ -11,7 +11,7 @@ class WeatherByMonth
     file_name = extract_file_name
     data = extract_data(file_name, 2)
     result = data.max_by { |_k, v| v.to_i } [1]
-    puts "Highest Average:  #{result}C"
+    ['Highest Average:  ', result, 'C']
   end
 
   # Calculate average lowest temperature
@@ -19,7 +19,7 @@ class WeatherByMonth
     file_name = extract_file_name
     data = extract_data(file_name, 2)
     result = data.min_by { |_k, v| v.to_i } [1]
-    puts "Lowest Average:   #{result}C"
+    ['Lowest Average:   ', result, 'C']
   end
 
   # Calculate average humidity
@@ -27,6 +27,6 @@ class WeatherByMonth
     file_name = extract_file_name
     data = extract_data(file_name, 8)
     result = data.max_by { |_k, v| v.to_i } [1]
-    puts "Average Humidity: #{result}%"
+    ['Average Humidity: ', result, '%']
   end
 end
