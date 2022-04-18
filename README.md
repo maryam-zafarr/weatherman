@@ -17,10 +17,17 @@ Lowest Average: 18C
 Average Humidity: 71%
 ```
 
-**3. For a given month draw one horizontal bar chart on the console for the highest and lowest temperature on each day. Highest in red and lowest in blue.**
+**3.  For a given month draw two horizontal bar charts on the console for the highest and lowest temperature on each day. Highest in red and lowest in blue.**
 ```
 ruby weatherman.rb -c 2007/11 /path/to/files
 March 2011
-01 +++++++++++++++++++++++++++++++++++ 11C - 25C 
+01 +++++++++++++++++++++++++ 25C 
+01 +++++++++++ 11C
+```
+**4. Bonus Task.  For a given month draw one horizontal bar chart on the console for the highest and lowest temperature on each day. Highest in red and lowest in blue.**
+```
+ruby weatherman.rb -c 2007/11 /path/to/files
+March 2011
+01 +++++++++++++++++++++++++++++++++++ 11C - 25C
 02 +++++++++++++++++++++++++++++ 08C - 22C
 ```
