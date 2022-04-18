@@ -43,6 +43,10 @@ module BasicCalculations
   def format_date(date)
     Date.parse(date.to_s).strftime('%d')
   end
+  
+  def extract_month_year(date)
+    Date.parse(date.to_s).strftime('%B %Y')
+  end
 end
 
 # Module to perform weather calculations
@@ -79,5 +83,20 @@ module WeatherCalculations
       min_val_month = month_name(month.next)
     end
     [min_val, min_val_day, min_val_month]
+  end
+end
+
+# Module to print weather reports
+module OutputReport
+  def print_report_year(arr)
+    arr.each do |a|
+      puts "#{a[0]}: #{a[1]}#{a[4]} on #{a[2]} #{a[3]}"
+    end
+  end
+
+  def print_report_month(arr)
+    arr.each do |a|
+      puts "#{a[0]}: #{a[1]}#{a[2]}"
+    end
   end
 end
